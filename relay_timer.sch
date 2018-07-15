@@ -1,0 +1,416 @@
+EESchema Schematic File Version 4
+LIBS:relay_timer-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2200 3050 550  1300
+U 5B4585D9
+F0 "7seg" 50
+F1 "7seg.sch" 50
+F2 "a" I R 2750 3550 50 
+F3 "b" I R 2750 4050 50 
+F4 "c" I R 2750 3750 50 
+F5 "d" I R 2750 3950 50 
+F6 "e" I R 2750 4250 50 
+F7 "f" I R 2750 3650 50 
+F8 "g" I R 2750 4150 50 
+F9 "P" I R 2750 3850 50 
+F10 "VCC" I L 2200 3100 50 
+F11 "GND" I L 2200 4250 50 
+F12 "~CA1" I R 2750 3100 50 
+F13 "~CA2" I R 2750 3300 50 
+F14 "~CA3" I R 2750 3200 50 
+F15 "~CA4" I R 2750 3400 50 
+$EndSheet
+$Comp
+L power:GND #PWR01
+U 1 1 5B4687B2
+P 2100 4350
+F 0 "#PWR01" H 2100 4100 50  0001 C CNN
+F 1 "GND" H 2105 4177 50  0000 C CNN
+F 2 "" H 2100 4350 50  0001 C CNN
+F 3 "" H 2100 4350 50  0001 C CNN
+	1    2100 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4350 2100 4250
+Wire Wire Line
+	2100 4250 2200 4250
+Wire Wire Line
+	2200 3100 2100 3100
+Wire Wire Line
+	2100 3100 2100 3000
+$Comp
+L power:+5V #PWR02
+U 1 1 5B468826
+P 2100 3000
+F 0 "#PWR02" H 2100 2850 50  0001 C CNN
+F 1 "+5V" H 2115 3173 50  0000 C CNN
+F 2 "" H 2100 3000 50  0001 C CNN
+F 3 "" H 2100 3000 50  0001 C CNN
+	1    2100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5B468E7A
+P 4200 3850
+F 0 "A1" H 3850 2900 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 4700 2800 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4350 2900 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4200 2850 50  0001 C CNN
+	1    4200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5B468ECA
+P 4400 2850
+F 0 "#PWR03" H 4400 2700 50  0001 C CNN
+F 1 "+5V" H 4415 3023 50  0000 C CNN
+F 2 "" H 4400 2850 50  0001 C CNN
+F 3 "" H 4400 2850 50  0001 C CNN
+	1    4400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5B468EDD
+P 4300 4950
+F 0 "#PWR04" H 4300 4700 50  0001 C CNN
+F 1 "GND" H 4305 4777 50  0000 C CNN
+F 2 "" H 4300 4950 50  0001 C CNN
+F 3 "" H 4300 4950 50  0001 C CNN
+	1    4300 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4850 4300 4900
+Wire Wire Line
+	4300 4900 4200 4900
+Wire Wire Line
+	4200 4900 4200 4850
+Connection ~ 4300 4900
+Wire Wire Line
+	4300 4900 4300 4950
+Wire Wire Line
+	3700 3550 3600 3550
+Wire Wire Line
+	3600 3550 3600 3100
+Wire Wire Line
+	3600 3100 2750 3100
+Wire Wire Line
+	2750 3200 3500 3200
+Wire Wire Line
+	3500 3200 3500 4150
+Wire Wire Line
+	3500 4150 3700 4150
+Wire Wire Line
+	3700 4250 3400 4250
+Wire Wire Line
+	3400 4250 3400 3300
+Wire Wire Line
+	3400 3300 2750 3300
+Wire Wire Line
+	3300 4350 3700 4350
+Wire Wire Line
+	2750 3400 3300 3400
+Wire Wire Line
+	3300 3400 3300 4350
+Wire Wire Line
+	2750 3550 3550 3550
+Wire Wire Line
+	3550 3550 3550 3450
+Wire Wire Line
+	3550 3450 3700 3450
+Wire Wire Line
+	2750 3650 3700 3650
+Wire Wire Line
+	2750 3750 3700 3750
+Wire Wire Line
+	2750 3850 3700 3850
+Wire Wire Line
+	2750 3950 3700 3950
+Wire Wire Line
+	2750 4050 3700 4050
+Wire Wire Line
+	2750 4150 3200 4150
+Wire Wire Line
+	3200 4150 3200 4450
+Wire Wire Line
+	3200 4450 3700 4450
+Wire Wire Line
+	2750 4250 3100 4250
+Wire Wire Line
+	3100 4250 3100 4550
+Wire Wire Line
+	3100 4550 3700 4550
+$Comp
+L Device:R_POT RV1
+U 1 1 5B46C81F
+P 5200 3700
+F 0 "RV1" H 5130 3746 50  0000 R CNN
+F 1 "R_POT" H 5130 3655 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5200 3700 50  0001 C CNN
+F 3 "~" H 5200 3700 50  0001 C CNN
+	1    5200 3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3850 4750 3850
+$Comp
+L power:+5V #PWR05
+U 1 1 5B46CE0C
+P 5200 3550
+F 0 "#PWR05" H 5200 3400 50  0001 C CNN
+F 1 "+5V" H 5215 3723 50  0000 C CNN
+F 2 "" H 5200 3550 50  0001 C CNN
+F 3 "" H 5200 3550 50  0001 C CNN
+	1    5200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5B46CE2F
+P 5200 3850
+F 0 "#PWR06" H 5200 3600 50  0001 C CNN
+F 1 "GND" H 5205 3677 50  0000 C CNN
+F 2 "" H 5200 3850 50  0001 C CNN
+F 3 "" H 5200 3850 50  0001 C CNN
+	1    5200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:RTE4xxxx K1
+U 1 1 5B46D5C1
+P 8350 3750
+F 0 "K1" V 9100 3750 50  0000 C CNN
+F 1 "DPST FormA" V 9000 3750 50  0000 C CNN
+F 2 "Relay_THT:Relay_DPST_Schrack-RT2-FormA_RM5mm" H 8350 3750 50  0001 C CNN
+F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FRT2%7F1014%7Fpdf%7FEnglish%7FENG_DS_RT2_1014.pdf%7F6-1393243-3" H 9000 3900 50  0001 C CNN
+	1    8350 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5B46D782
+P 8950 4050
+F 0 "J2" H 9030 4042 50  0000 L CNN
+F 1 "Output" H 9030 3951 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 8950 4050 50  0001 C CNN
+F 3 "~" H 8950 4050 50  0001 C CNN
+	1    8950 4050
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5B46E654
+P 7750 3950
+F 0 "J1" H 7830 3942 50  0000 L CNN
+F 1 "Input" H 7830 3851 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 7750 3950 50  0001 C CNN
+F 3 "~" H 7750 3950 50  0001 C CNN
+	1    7750 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5B4700A1
+P 7100 3400
+F 0 "Q1" H 7305 3446 50  0000 L CNN
+F 1 "BSS138" H 7305 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7300 3500 50  0001 C CNN
+F 3 "~" H 7100 3400 50  0001 C CNN
+	1    7100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D1
+U 1 1 5B470232
+P 8350 3050
+F 0 "D1" H 8350 2834 50  0000 C CNN
+F 1 "1N4007" H 8350 2925 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8350 2875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8350 3050 50  0001 C CNN
+	1    8350 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8200 3050 8000 3050
+Wire Wire Line
+	8000 3050 8000 3350
+Wire Wire Line
+	8000 3350 8050 3350
+Wire Wire Line
+	8500 3050 8700 3050
+Wire Wire Line
+	8700 3050 8700 3350
+Wire Wire Line
+	8700 3350 8650 3350
+Wire Wire Line
+	8700 3050 8700 2950
+Connection ~ 8700 3050
+$Comp
+L power:+5V #PWR07
+U 1 1 5B472614
+P 8700 2950
+F 0 "#PWR07" H 8700 2800 50  0001 C CNN
+F 1 "+5V" H 8715 3123 50  0000 C CNN
+F 2 "" H 8700 2950 50  0001 C CNN
+F 3 "" H 8700 2950 50  0001 C CNN
+	1    8700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5B4763C4
+P 6850 3550
+F 0 "R1" H 6909 3596 50  0000 L CNN
+F 1 "10k" H 6909 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.84x1.00mm_HandSolder" H 6850 3550 50  0001 C CNN
+F 3 "~" H 6850 3550 50  0001 C CNN
+	1    6850 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3450 6850 3400
+Wire Wire Line
+	6850 3400 6900 3400
+Wire Wire Line
+	6850 3650 6850 3700
+Wire Wire Line
+	6850 3700 7200 3700
+Wire Wire Line
+	7200 3700 7200 3600
+Wire Wire Line
+	7200 3700 7200 3750
+Connection ~ 7200 3700
+$Comp
+L power:GND #PWR08
+U 1 1 5B478BE4
+P 7200 3750
+F 0 "#PWR08" H 7200 3500 50  0001 C CNN
+F 1 "GND" H 7205 3577 50  0000 C CNN
+F 2 "" H 7200 3750 50  0001 C CNN
+F 3 "" H 7200 3750 50  0001 C CNN
+	1    7200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3200 7200 3050
+Wire Wire Line
+	7200 3050 8000 3050
+Connection ~ 8000 3050
+Wire Wire Line
+	6850 3400 6800 3400
+Connection ~ 6850 3400
+Text GLabel 6800 3400 0    50   Input ~ 0
+Relay
+Text GLabel 4700 3950 2    50   Output ~ 0
+Relay
+Wire Wire Line
+	4750 3850 4750 3700
+Wire Wire Line
+	4750 3700 5050 3700
+$Comp
+L Switch:SW_MEC_5G SW1
+U 1 1 5B42801C
+P 5450 4250
+F 0 "SW1" H 5450 4500 50  0000 C CNN
+F 1 "tactile" H 5450 4444 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 5450 4450 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 5450 4450 50  0001 C CNN
+	1    5450 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5B42A55A
+P 5700 4300
+F 0 "#PWR09" H 5700 4050 50  0001 C CNN
+F 1 "GND" H 5705 4127 50  0000 C CNN
+F 2 "" H 5700 4300 50  0001 C CNN
+F 3 "" H 5700 4300 50  0001 C CNN
+	1    5700 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4250 4900 4250
+Wire Wire Line
+	4900 4250 4900 4050
+Wire Wire Line
+	4900 4050 4700 4050
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5B42CAB7
+P 5200 4450
+F 0 "BZ1" H 5353 4479 50  0000 L CNN
+F 1 "Buzzer" H 5353 4388 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 5175 4550 50  0001 C CNN
+F 3 "~" V 5175 4550 50  0001 C CNN
+	1    5200 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4250 5700 4250
+Wire Wire Line
+	5700 4250 5700 4300
+Wire Wire Line
+	4700 4150 4800 4150
+Wire Wire Line
+	4800 4150 4800 4350
+Wire Wire Line
+	4800 4350 5100 4350
+$Comp
+L power:GND #PWR010
+U 1 1 5B432DB1
+P 5050 4600
+F 0 "#PWR010" H 5050 4350 50  0001 C CNN
+F 1 "GND" H 5055 4427 50  0000 C CNN
+F 2 "" H 5050 4600 50  0001 C CNN
+F 3 "" H 5050 4600 50  0001 C CNN
+	1    5050 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4600 5050 4550
+Wire Wire Line
+	5050 4550 5100 4550
+Wire Wire Line
+	8650 3850 8700 3850
+Wire Wire Line
+	8700 3850 8700 3950
+Wire Wire Line
+	8700 3950 8750 3950
+Wire Wire Line
+	8700 4150 8700 4250
+Wire Wire Line
+	8700 4250 8650 4250
+Wire Wire Line
+	8700 4150 8750 4150
+Wire Wire Line
+	7950 3850 8000 3850
+Wire Wire Line
+	8000 3850 8000 3750
+Wire Wire Line
+	8000 3750 8050 3750
+Wire Wire Line
+	7950 4050 8000 4050
+Wire Wire Line
+	8000 4050 8000 4150
+Wire Wire Line
+	8000 4150 8050 4150
+$EndSCHEMATC
